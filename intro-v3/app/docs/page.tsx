@@ -1,4 +1,4 @@
-const  DocsPage = () => {
+const DocsPage = () => {
     return <div>docs</div>
 }
 
