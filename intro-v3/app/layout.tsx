@@ -27,7 +27,7 @@ export default function RootLayout({
         <nav> 
           <ul className="flex items-center">
             {links.map(link => (
-              <li key={link.href}>
+              <li key={link.href} className="px-4 text-2xl">
               <Link href={link.href}>{link.label} </Link>
               </li>
             ))}
