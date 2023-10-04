@@ -1,4 +1,5 @@
+import Editor from "./Editor";
 import EntryCard from "./EntryCard";
 import NewEntryCard from "./NewEntryCard";
 
-export { EntryCard, NewEntryCard}
+export { Editor, EntryCard, NewEntryCard}
