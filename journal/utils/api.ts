@@ -2,7 +2,7 @@ const createURL = (path: string) => {
     return window.location.origin + path
 }
 
-export const updateEntry = async (id, content) => { // function to update entry on autosave
+export const updateEntry = async (id: string, content) => { // function to update entry on autosave
     const res = await fetch(new Request(createURL(`/api/journals/${id}`), {
         method: 'PATCH',
         body: JSON.stringify({content})
