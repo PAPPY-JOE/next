@@ -34,7 +34,8 @@ model JournalEntry {
 
   analysis Analysis?
 
-  @@index([userId]) // This makes the userId have a unique reference in the array
+  // @@index([userId]) // This makes the userId have a unique reference in the array
+  @@unique([userId, id]) // This makes the userId have a unique reference in the array
 }
 
 model Analysis {
