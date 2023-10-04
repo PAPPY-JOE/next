@@ -14,6 +14,7 @@
     "mongodb": "^6.1.0",
     "next": "latest",
     "react": "latest",
+    "react-autosave": "^0.4.2",
     "react-dom": "latest"
   },
   "devDependencies": {
