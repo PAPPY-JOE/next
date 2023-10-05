@@ -43,13 +43,14 @@ model Analysis {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  entryId String
-  entry   JournalEntry @relation(fields: [entryId], references: [id])
-
   mood     String
+  subject  String
   summary  String  @db.Text
   color    String
-  nagative Boolean
+  negative Boolean
+
+  entryId String
+  entry   JournalEntry @relation(fields: [entryId], references: [id], onDelete: Cascade) // onDelete cascade means to 'sel-destruct' ones the parent entry has been deleted
 
   @@unique([entryId])
 }
