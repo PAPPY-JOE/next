@@ -2,16 +2,18 @@ const createURL = (path: string) => {
     return window.location.origin + path
 }
 
-export const updateEntry = async (id: string, content) => { // function to update entry on autosave
-    const res = await fetch(new Request(createURL(`/api/journals/${id}`), {
+export const updateEntry = async (id, content) => { // function to update entry on autosave
+    const res = await fetch(new Request(createURL(`/api/journal/${id}`), {
         method: 'PATCH',
-        body: JSON.stringify({content})
-    }))
-
+        body: JSON.stringify({ content })
+    })) 
+    
     if (res.ok) {
         const data = await res.json()
         return data.data
-    }
+    }  else {
+        throw new Error('Something went wrong on API server!')
+      }
 }
 
 export const createNewEntry = async () => {
@@ -22,5 +24,7 @@ export const createNewEntry = async () => {
     if (res.ok) {
         const data = await res.json()
         return data.data
-    }
+    }  else {
+        throw new Error('Something went wrong on API server!...')
+      }
 } 
