@@ -2,6 +2,7 @@ import { UserButton } from '@clerk/nextjs'
 import Link from 'next/link'
 
 const links = [
+  { name: 'Home', href: '/' },
   { name: 'Journals', href: '/journal' },
   { name: 'History', href: '/history' },
 ]
@@ -16,7 +17,7 @@ const DashboardLayout = ({ children }) => {
         <div>
           <ul className="px-4">
             {links.map((link) => (
-              <li key={link.name} className="text-xl my-4">
+              <li key={link.name} className="text-xl px-2 py-6">
                 <Link href={link.href}>{link.name}</Link>
               </li>
             ))}
