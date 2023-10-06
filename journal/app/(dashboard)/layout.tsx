@@ -1,11 +1,11 @@
-import { UserButton } from '@clerk/nextjs'
-import Link from 'next/link'
+import { UserButton } from "@clerk/nextjs";
+import Link from "next/link";
 
 const links = [
-  { name: 'Home', href: '/' },
-  { name: 'Journals', href: '/journal' },
-  { name: 'History', href: '/history' },
-]
+  { name: "Home", href: "/" },
+  { name: "Journals", href: "/journal" },
+  { name: "History", href: "/history" },
+];
 
 const DashboardLayout = ({ children }) => {
   return (
@@ -35,7 +35,7 @@ const DashboardLayout = ({ children }) => {
         <div className="h-[calc(100vh-60px)]">{children}</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DashboardLayout
+export default DashboardLayout;

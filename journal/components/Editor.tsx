@@ -7,7 +7,7 @@ import { useAutosave } from "react-autosave";
 const Editor = ({ entry }) => {
   const [value, setValue] = useState(entry.content);
   const [isLoading, setIsLoading] = useState(false);
-  const [analysis, setAnalysis] = useState(entry?.analysis);
+  const [analysis, setAnalysis] = useState(entry.analysis);
 
   const { mood, summary, color, subject, negative } = analysis;
   const analysisData = [
@@ -25,7 +25,7 @@ const Editor = ({ entry }) => {
       // the '_value' and 'value' both have the same values lmao, but using '_value' ensures that I'm on the latest
       setIsLoading(true);
       const data = await updateEntry(entry.id, _value);
-      setAnalysis(data);
+      setAnalysis(data.analysis);
       setIsLoading(false);
     },
   });
