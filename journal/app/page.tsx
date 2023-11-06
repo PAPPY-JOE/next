@@ -1,8 +1,6 @@
 import { auth } from "@clerk/nextjs";
 import Link from "next/link";
-import Image from "next/image";
-import img from "@/assets/mood-transparent-white.png";
-import { GetStartedBtn, GetStartedSlider } from "@/components";
+import { GetStartedBtn, GetStartedSlider, Header } from "@/components";
 
 export default async function Home() {
   const { userId } = await auth();
@@ -10,38 +8,44 @@ export default async function Home() {
   let href = userId ? "/journal" : "/new-user";
 
   return (
-    <div className="w-screen bg-[#040406] flex flex-col items-center text-white relative">
+    <div className="w-screen min-h-screen bg-[#040406] flex flex-col items-center text-white relative">
       <div className="bg-gradient-to-br from-[#4c4e52] from-5% via-[#000302] via-25% to-[#040406] to-100% absolute w-full t-0 h-full" />
       <div className="bg-gradient-to-tl from-[#4c4e52] from-1% via-transparent via-25% to-transparent to-100% absolute w-full b-0 h-full flex-1" />
       <div className="bg-gradient-to-tr from-transparent from-50% via-[#4c4e52] via-15% to-transparent to-80% absolute w-full b-0 h-full flex-1" />
-      <div className="w-full flex items-center justify-between px-8 py-3 absolute">
-        <div className="-ml-6 overflow-hidden flex justify-center w-32 h-10 items-center">
-          <Image
-            src={img}
-            width={200}
-            height={20}
-            sizes="(max-width: 769px) 100vw, 33vw"
-            alt="logo"
-          />
-        </div>
-        <div className="flex group flex-col items-end justify-center cursor-pointer">
-          <p className="p-0.5 rounded-full w-10 bg-cyan-300 mb-1"></p>
-          <p className="p-0.5 rounded-full w-6 group-hover:w-8 ease-in-out duration-300 bg-white"></p>
-        </div>
+      <Header />
+
+      <div className="absolute z-0 mr-auto flex-1 w-[200px] h-full left-0 bottom-0 flex items-end justify-end overflow-y-hidden md:w-full md:justify-start md:items-end">
+        <p className="font-jost font-bold text-[100px] rotate-90 text-right opacity-5 md:rotate-0 md:-mb-10">
+          MOOD
+        </p>
       </div>
 
-      <div className="w-full max-w-[600px] mx-auto mt-20 h-[800px] z-50 px-4 text-center">
-        <GetStartedSlider />
-        <h1 className="text-5xl mb-4">The best jornal app period.</h1>
-        <p className="text-lg text-white/60 mb-4 ">
-          This is the best app for tracking your mood throughout your life.{" "}
-          <br />
-          All you have to do is be honest!
+      <div className="absolute z-0 mr-auto flex-1 w-[200px] h-full right-0 bottom-0 flex items-end justify-end md:justify-center md:items-center">
+        <p className="font-jost font-bold text-[100px] text-right opacity-5 -mr-12 md:mt-64 md:mr-0">
+          V2
         </p>
-        <div className="w-full flex items-center justify-center mt-6">
-          <Link href={href} className="w-full flex items-center justify-center">
-            <GetStartedBtn />
-          </Link>
+      </div>
+
+      <div className="md:w-max mx-auto mt-20 h-full z-20 px-3 text-center md:text-left flex flex-col items-center md:flex-row-reverse md:my-auto md:px-4 xl:scale-110">
+        <GetStartedSlider />
+        <div className="flex-1 md:max-w-[405px]">
+          <h1 className="text-4xl md:text-5xl mb-6 font-bold font-jSans">
+            The best journal app period.
+          </h1>
+          <p className="text-sm md:text-lg text-white/60">
+            This is the best app for tracking your mood throughout your life.{" "}
+            <br />
+            All you have to do is be honest!
+          </p>
+          <div className="w-full flex items-center justify-center my-12">
+            <Link
+              // href={href}
+              href={"/"}
+              className="w-full flex items-center justify-center md:justify-start"
+            >
+              <GetStartedBtn />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

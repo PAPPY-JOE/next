@@ -17,6 +17,7 @@
     "react": "latest",
     "react-autosave": "^0.4.2",
     "react-dom": "latest",
+    "react-icons": "^4.11.0",
     "recharts": "^2.8.0",
     "zod": "^3.22.3"
   },
