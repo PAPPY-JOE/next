@@ -7,7 +7,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="w-full flex flex-col items-center fixed t-0 z-50">
+    <div className="w-full flex flex-col items-center fixed t-0 z-50 backdrop-blur-sm">
       <div className="w-full flex justify-between items-center px-8 py-3">
         <div className="-ml-6 overflow-hidden flex justify-center w-32 h-10 items-center">
           <Image
