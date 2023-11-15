@@ -28,12 +28,7 @@ const GetStartedSlider = () => {
             >
               <div className="bg-gradient-to-tr from-[#4c4e52] from-50% via-[#626468] via-15% to-[#3d3e41] to-80% absolute w-full t-0 h-full" />
               <div className="bg-gradient-to-br from-[#4c4e52] from-5% via-[#000302] via-25% to-transparent to-100% absolute w-full t-0 h-full" />
-              <Image
-                src={item.img}
-                // width={200}
-                alt="logo"
-                className="z-50"
-              />
+              <Image src={item.img} alt="logo" className="z-50" />
             </div>
           ))}
         </div>
