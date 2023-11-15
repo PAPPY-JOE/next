@@ -14,7 +14,7 @@ export default async function Home() {
       <div className="bg-gradient-to-tr from-transparent from-50% via-[#4c4e52] via-15% to-transparent to-80% absolute w-full b-0 h-full flex-1" />
       <Header />
 
-      <div className="absolute z-0 mr-auto flex-1 w-[200px] h-[85vh] md:h-full left-0 top-0 flex items-end justify-end  md:w-full md:justify-start overflow-hidden">
+      <div className="absolute z-0 mr-auto flex-1 w-[200px] h-[85vh] md:h-full left-0 top-0 flex items-end justify-end  md:w-full md:justify-start md:overflow-hidden">
         <p className="font-cVintage font-bold text-[150px] md:text-[200px] rotate-90 text-right opacity-5 md:rotate-0 md:translate-y-12 ">
           MOOD
         </p>
