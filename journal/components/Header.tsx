@@ -7,7 +7,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="w-full flex flex-col items-center fixed t-0 z-50">
+    <div className="w-full flex flex-col items-center fixed t-0 z-50 backdrop-blur-sm">
       <div className="w-full flex justify-between items-center px-8 py-3">
         <div className="-ml-6 overflow-hidden flex justify-center w-32 h-10 items-center">
           <Image
@@ -19,11 +19,12 @@ const Header = () => {
           />
         </div>
         <div
-          className={`w-full flex items-center justify-center text-xs md:text-sm font-bold font-jSans ${
+          className={`w-full flex items-center justify-center text-lg md:text-sm font-bold font-jSans ${
             open
               ? "w-screen h-screen absolute top-0 flex flex-col -mx-8 md:relative md:w-full md:flex-row md:h-max md:mx-0"
               : "hidden md:flex"
           }`}
+          onClick={() => setOpen(!open)}
         >
           <div
             className={`mr-auto flex items-center ${
@@ -61,7 +62,7 @@ const Header = () => {
       >
         <div className="w-full px-8 mt-5 flex justify-end">
           <div style={{ zIndex: 5 }} onClick={() => setOpen(!open)}>
-            <MdClose size={45} className="text-cyan-300" />
+            <MdClose size={40} className="text-cyan-300" />
           </div>
         </div>
       </div>
