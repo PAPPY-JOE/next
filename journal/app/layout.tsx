@@ -1,26 +1,51 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
-import { Jost, Montserrat, Poppins } from "next/font/google";
+import localFont from "next/font/local";
 
-const mont = Montserrat({
-  subsets: ["latin"],
+const aSans = localFont({
+  src: [
+    {
+      path: "../assets/fonts/argentumSans/ArgentumSans-ExtraLight.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/argentumSans/ArgentumSans-Light.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/argentumSans/ArgentumSans-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-aSans",
   display: "swap",
+});
+
+const cVintage = localFont({
+  src: "../assets/fonts/camarVintage/Camar.otf",
+  variable: "--font-cVintage",
+  display: "swap",
+});
+
+const mont = localFont({
+  src: [
+    {
+      path: "../assets/fonts/mont/MontExtraLight.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/mont/MontHeavy.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
   variable: "--font-mont",
-});
-
-const jSans = Poppins({
-  subsets: ["latin"],
-  weight: ["400"],
   display: "swap",
-  variable: "--font-jSans",
-});
-
-const jost = Jost({
-  subsets: ["latin"],
-  weight: ["400"],
-  display: "swap",
-  variable: "--font-jSans",
 });
 
 export const metadata: Metadata = {
@@ -37,7 +62,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" className="overflow-x-hidden">
         <body
-          className={`${mont.variable} ${jSans.variable} ${jost.variable} font-mont`}
+          className={`${aSans.variable} ${cVintage.variable} ${mont.variable} font-aSans`}
         >
           {children}
         </body>
