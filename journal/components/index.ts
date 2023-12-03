@@ -6,6 +6,7 @@ import Header from "./Header";
 import HistoryChart from "./HistoryChart";
 import NewEntryCard from "./NewEntryCard";
 import Question from "./Question";
+import Slide from "./Slide";
 
 export {
   Editor,
@@ -16,4 +17,5 @@ export {
   HistoryChart,
   NewEntryCard,
   Question,
+  Slide,
 };
