@@ -46,7 +46,10 @@ const GetStartedSlider = () => {
       currentSlide(nextIndex);
     };
 
-    timeout.current = setTimeout(nextSlide, 2500);
+    const slideTimeout = setTimeout(nextSlide, 2500);
+
+    // Clear the timeout when the component unmounts or when the slide changes manually
+    return () => clearTimeout(slideTimeout);
   }, [slideCount, current]);
 
   return (
