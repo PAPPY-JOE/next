@@ -15,7 +15,7 @@ const GetStartedBtn = () => {
         </span>
       </div>{" "}
       <span className="ml-12 flex-1 text-left flex items-center">
-        <span className="mr-2"> Get started </span>
+        <span className="mr-2 whitespace-nowrap"> Get started </span>
         <FaChevronRight size={25} className="text-cyan-900" />
         <FaChevronRight size={25} className="text-cyan-600" />
         <FaChevronRight size={25} className="text-cyan-400" />

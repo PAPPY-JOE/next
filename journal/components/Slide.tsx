@@ -5,7 +5,7 @@ import Image from "next/image";
 const Slide = ({ data, currentSlide, current, activeSlideRef }) => {
   return (
     <div className="relative flex flex-col items-center justify-center md:flex-row md:scale-90">
-      <div className="relative flex flex-col overflow-hidden items-center justify-center md:flex-row md:max-h-[1800px]">
+      <div className="relative flex flex-col overflow-hidden items-center justify-center md:flex-row md:max-h-[1300px]">
         <div className="flex items-center justify-center md:flex-col">
           {data.map((slide, index) => (
             <div

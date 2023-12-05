@@ -26,19 +26,22 @@ export default async function Home() {
         </p>
       </div>
 
-      <div className="md:hidden flex overflow-hidden flex-col items-center justify-center h-screen w-screen absolute t-0 l-0">
+      <div className="md:hidden flex overflow-hidden flex-col items-center justify-center h-full min-h-screen w-screen absolute t-0 l-0">
         <span className="absolute top-3/4 -left-6 border border-white rounded-full p-6 md:p-7 m-2" />
         <span className="absolute top-3/4 -right-6 border border-white rounded-full p-6 md:p-7 m-2" />
         <span className="absolute -bottom-10 left-auto right-auto border border-white rounded-full w-6/12 p-8 md:p-7 m-2" />
       </div>
 
-      <div className="md:w-max mx-auto mt-20 h-full z-20 px-2 text-center md:text-left flex flex-col items-center md:flex-row-reverse my-auto md:mt-0 md:px-4 flex-wrap">
+      <div className="md:w-max mx-auto mt-20 h-full z-20 text-center md:text-left flex flex-col items-center md:flex-row-reverse my-auto md:mt-0 md:px-4 flex-wrap">
         <GetStartedSlider />
         <div className="flex-1 md:max-w-[405px] flex flex-col items-center justify-center">
-          <h1 className="text-4xl md:text-5xl mb-6 font-bold font-mont">
-            The best journal app p
-            <span className="inline-flex flex-col w-max">
-              eriod. <i className="bg-white h-1.5 -mt-1 w-full" />
+          <h1 className="text-4xl md:text-5xl mb-6 font-bold font-mont max-w-[90vw] sm:max-w-max">
+            The best journal app{" "}
+            <span className="whitespace-nowrap">
+              p
+              <span className="inline-flex flex-col w-max">
+                eriod. <i className="bg-white h-1.5 -mt-1 w-full" />
+              </span>
             </span>
           </h1>
           <p className="text-sm md:text-lg text-white/60 max-w-[80vw]">
@@ -50,7 +53,7 @@ export default async function Home() {
             <Link
               // href={href}
               href={"/"}
-              className="w-full flex items-center justify-center md:justify-start"
+              className="w-full flex items-center justify-center md:justify-start max-w-[90vw] sm:max-w-max"
             >
               <GetStartedBtn />
             </Link>
@@ -58,7 +61,7 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className="hidden md:flex absolute bottom-0 w-full p-2 h-[5%] overflow-hidden items-center justify-center bg-cyan-400 z-50">
+      <div className="hidden md:flex absolute bottom-0 w-full p-2 h-[6%] overflow-hidden items-center justify-center bg-cyan-400 z-50">
         <div className="flex w-full h-56 items-center justify-around relative">
           <span className="absolute border-2 border-white rounded-full p-24 m-2 animate-roundTheWorld" />
           <span className="absolute border-2 border-white rounded-full p-24 m-2 animate-roundTheWorldie" />

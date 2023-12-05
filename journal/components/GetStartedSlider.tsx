@@ -52,12 +52,14 @@ const GetStartedSlider = () => {
   return (
     <div className="p-1 mb-10 flex md:flex-row-reverse flex-col md:mb-0 md:py-0 items-center justify-center md:block relative md:h-screen md:min-w-[350px] md:overflow-y-hidden md:overflow-x-visible ">
       <div className="flex flex-col items-center max-w-[95vw] justify-center overflow-hidden">
-        <Slide
-          data={sliderImg}
-          current={current}
-          currentSlide={currentSlide}
-          activeSlideRef={activeSlideRef}
-        />
+        <div className="w-[1300px] flex items-center justify-end md:justify-center md:w-max md:max-w-[95vw] md:overflow-hidden">
+          <Slide
+            data={sliderImg}
+            current={current}
+            currentSlide={currentSlide}
+            activeSlideRef={activeSlideRef}
+          />
+        </div>
       </div>
       <div className="flex bottom-0 right-auto left-auto z-30  min-w-[150px] max-w-[200px]">
         {data.map((slide, index) => (
